@@ -6,5 +6,6 @@
 
 1. ArraySorterTester.testArrayReorganisation()
 2. MostEncountersCalculatorTester.testGettingMostEncountered()
-4. (4 задание) ArrayPartitionerTester.testPartitioningArray()
+3. GameTester.testEvaluatingProbability()
+4. ArrayPartitionerTester.testPartitioningArray()
 
