@@ -32,7 +32,6 @@ public class Game {
         for (int i = 0; i < N; i++)
         {
             final int number = getRandomNumber();
-            System.out.print(number + " ");
             updatePoints(number);
         }
 

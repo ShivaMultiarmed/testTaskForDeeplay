@@ -87,7 +87,7 @@ public class ArrayPartitioner {
         if (index == arr.length) {
             for (int i = 0; i < targetSums.length; i++) {
                 final int sum = partitionsCopy.get(i).stream().mapToInt(Integer::intValue).sum();
-                if (sum != targetSums[i]) {
+                if (sum != targetSums[i]) { // проверяем совпадают ли суммы с ожидаемыми
                     return false;
                 }
             }
@@ -96,12 +96,12 @@ public class ArrayPartitioner {
 
         for (int i = 0; i < partitions.size(); i++) {
             partitions.get(i).add(arr[index]);
-            if (canPartition(index + 1)) {
+            if (canPartition(index + 1)) { // Проверяем, можем ли добавить в i-ую часть ещё число
                 return true;
             }
             partitions.get(i).remove(partitions.get(i).size() - 1);
 
-            if (partitions.get(i).isEmpty()) {
+            if (partitions.get(i).isEmpty()) { // часть не должна быть пустой, поэтому прерываем цикл
                 break;
             }
         }

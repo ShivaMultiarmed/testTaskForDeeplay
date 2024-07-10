@@ -11,7 +11,7 @@ public class GameTester {
     void testEvaluatingProbability()
     {
         final int N = 100, M = 10000; // N - число бросков за одну игру, M - количество суимуляций игры
-        int p1 = 0, draws = 0;
+        int p1 = 0, draws = 0; // p1 - количество побед первого игрока, draws - количество ничей
         for (int i = 0; i < M; i++)
         {
             final int[] sequence1 = generateArray(1,7,3), sequence2 = generateArray(1, 7, 3);
@@ -24,7 +24,6 @@ public class GameTester {
         }
         final double winProbability = 1.0 * p1 / M, drawProbability = 1.0 * draws / M;
         final double lossProbability = 1 - winProbability - drawProbability;
-        System.out.println("\n" + winProbability + " " + lossProbability + " " + drawProbability);
         final double delta = 0.05;
         assertEquals(0.25, winProbability, delta);
         assertEquals(0.25, lossProbability, delta);
