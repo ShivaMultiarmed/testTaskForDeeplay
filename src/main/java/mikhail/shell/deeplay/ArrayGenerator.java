@@ -6,6 +6,9 @@ import java.util.Random;
  * Класс для генерации массивов
  */
 public class ArrayGenerator {
+	/**
+	* Генератор случайных чисел.
+	*/
     private final static Random random = new Random();
 
     /**
